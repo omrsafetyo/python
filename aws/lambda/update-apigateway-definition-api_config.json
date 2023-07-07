@@ -1,0 +1,30 @@
+{
+    "Region": "us-east-1",
+    "EndpointId": "abcdefg",
+    "SwaggerUri": "https://myapi.myorg.com/swagger/v1/swagger.json",
+    "SwaggerType": "uri",
+    "ApiBaseUri": "https://myapi.myorg.com",
+    "ImportMode": "merge",
+    "DeployWhenSwaggerMatches": true,
+    "StringReplaceDictionary": {
+        "{version}": "1"
+    },
+    "Parameters" : {
+        "endpointConfigurationTypes" : "REGIONAL"
+    },
+    "DeploymentStages": [
+        "prod"
+    ],
+    "DefaultAuthorization": {
+        "authorizationType": "AWS_IAM",
+        "apiKeyRequired": false
+    },
+    "DefaultIntegration": {
+        "type": "HTTP_PROXY", 
+	"connectionType": "VPC_LINK",
+        "connectionId" : "abcdefg", 
+	"passthroughBehavior": "WHEN_NO_MATCH", 
+	"timeoutInMillis": 29000, 
+	"cacheKeyParameters": []
+    }
+}
