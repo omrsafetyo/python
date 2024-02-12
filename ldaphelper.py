@@ -780,7 +780,7 @@ class LdapHelper:
         - search_value (string): The value to filter for the specified field
 
         Returns: 
-        - boolean: True if connection is successful, False if connection fails
+        - string: The santizied ldap search string in string format
 
         Example:
         >>> user = ldap.create_safe_basic_search_string_from_objectclass_fieldname_value(object_class="user", search_field="SamAccountName", search_value="brad.pitt")
